@@ -29,3 +29,24 @@ create table server_repair(
     as_of_date date 
 );
 COPY server_repair from '/sampledata/server_repair.csv' DELIMITER ',' CSV HEADER;
+
+
+create table user_salary(
+    id integer,
+    salary integer,
+    bonus integer 
+);
+COPY user_salary from '/sampledata/user_salary.csv' DELIMITER ',' CSV HEADER;
+
+
+
+create table student_seat(
+    id integer,
+    student integer
+);
+COPY student_seat from '/sampledata/student_seat.csv' DELIMITER ',' CSV HEADER;
+
+
+
+
+
