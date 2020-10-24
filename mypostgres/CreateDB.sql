@@ -11,7 +11,8 @@ COPY visit from '/sampledata/visit.csv' DELIMITER ',' CSV HEADER;
 create table product_rev_summary(
     department  integer,
     product  varchar(5),
-    revenue  integer
+    revenue  integer,
+    channel  varchar(10)
 );
 COPY product_rev_summary from '/sampledata/product_rev_summary.csv' DELIMITER ',' CSV HEADER;
 
@@ -42,11 +43,23 @@ COPY user_salary from '/sampledata/user_salary.csv' DELIMITER ',' CSV HEADER;
 
 create table student_seat(
     id integer,
-    student integer
+    student varchar(10)
 );
 COPY student_seat from '/sampledata/student_seat.csv' DELIMITER ',' CSV HEADER;
 
 
+create table user_login(
+    id integer,
+    name varchar(40),
+    login_time timestamp
+);
+COPY user_login from '/sampledata/user_login.csv' DELIMITER ',' CSV HEADER;
 
+
+create table naive_login(
+    id integer,
+    login_date date 
+);
+COPY naive_login from '/sampledata/naive_login.csv' DELIMITER ',' CSV HEADER;
 
 
